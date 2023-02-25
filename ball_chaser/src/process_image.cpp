@@ -25,7 +25,7 @@ void process_image_callback(const sensor_msgs::Image img)
     int ball_is_found = 0; // initially the ball is not found
     int image_size = img.height * img.step;
 
-    for (int i = 0 ; i < image_size ; i++) {
+    for (int i = 0 ; i < image_size ; i=i+3) {
         if (img.data[i] == white_pixel && img.data[i+1] == white_pixel && img.data[i+2] == white_pixel) {
             ball_is_found = 1; //ball is found
             int position = i % img.step; // this is the position of the ball horizontally in the image frame 
