@@ -123,6 +123,7 @@
       <geometry>
         <cylinder radius="0.1" length="0.05"/>
       </geometry>
+      
     </visual>
     
     </link>
@@ -157,8 +158,32 @@
     
     </link>
     
+    <gazebo reference="left_wheel">
+    <material>
+      Gazebo/Orange
+    </material>
+    </gazebo>
+  
+    <gazebo reference="right_wheel">
+    <material>
+      Gazebo/Orange
+    </material>
+    </gazebo>
+    
+    <gazebo reference="chassis">
+    <material>
+      Gazebo/SkyBlue
+    </material>
+    </gazebo>
+    
+    <gazebo reference="camera">
+    <material>
+      Gazebo/Yellow
+    </material>
+    </gazebo>
     
-/
+    
+
   <link name='chassis'>
     <pose>0 0 0.1 0 0 0</pose>
 
